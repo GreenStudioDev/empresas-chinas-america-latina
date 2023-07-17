@@ -1,5 +1,6 @@
 import { ArrowBack, LocalShipping } from "@mui/icons-material";
 import React from "react";
+import "../../styles/CompanyStyles.css"
 import { Link } from "react-router-dom";
 
 export function CompanyTitle() {
@@ -15,7 +16,7 @@ export function CompanyTitle() {
         </div>
       </div>
       <div>
-        <h1>China Harbour Engineering Company (CHEC)</h1>
+        <h1 className="era-headercompany">China Harbour Engineering Company (CHEC)</h1>
         <span>公司: 中國港灣工程有限責任公司</span>
         <span>www.chec.bj.cn/pub/chec_pc/en/sy/</span>
       </div>

@@ -159,7 +159,7 @@ export function CompanyProjects() {
       </div>
       <div>
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <Table sx={{ minWidth: "720px", maxWidth:"1080px"}} aria-label="customized table">
             <TableHead>
               <TableRow>
                 <StyledTableCell align="center">País</StyledTableCell>

@@ -1,0 +1,13 @@
+/* Textos */
+.era-header{
+    font-size: 60px;
+    color: #0d0d00;
+}
+/* PDFs */
+.era-pdfcontainer {
+    display: flex;
+}
+/* PDFs Links */
+.era-pdflink {
+    color: #0d0d00;
+}
