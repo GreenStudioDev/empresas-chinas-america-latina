@@ -15,7 +15,7 @@ export function MapView() {
         projection="geoAzimuthalEqualArea"
         projectionConfig={{
           rotate: [77, 12, 0],
-          scale: 300,
+          scale: 400,
         }}
         // onClick={handleOnClick}
         // onWheelCapture={closeOnZoomIn}

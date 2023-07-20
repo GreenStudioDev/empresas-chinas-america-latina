@@ -1,0 +1,11 @@
+/*Container*/
+.home-description-container{
+    position: fixed;
+    margin-top: 0;
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #e4e4e4c8;
+    height: 350px;
+}

@@ -13,6 +13,8 @@ import {
   tableCellClasses,
 } from "@mui/material";
 import React from "react";
+import "../../styles/CountryStyles.css"
+import "../../styles/Global.css"
 
 export function CountryProjects() {
   const StyledTableCell = styled(TableCell)(() => ({
@@ -113,16 +115,13 @@ export function CountryProjects() {
   ];
 
   return (
-    <section>
-      <h3>Proyectos en Colombia</h3>
-      <div>
+    <section className="era-margins">
+      <h3 className="era-subheader">Proyectos en Colombia</h3>
+      <div className="era-filtros-container">
         <span>Filtrar por: </span>
-        <TextField
-          id="outlined-select-currency"
+        <TextField className="era-filtros-box"
           select
-          label="empresas"
           defaultValue="comp1"
-          helperText="Seleccione una empresa"
         >
           {companyFilter.map((option) => (
             <MenuItem key={option.value} value={option.value}>
@@ -130,15 +129,13 @@ export function CountryProjects() {
             </MenuItem>
           ))}
         </TextField>
-        <TextField
-          id="outlined-select-currency-native"
+        <TextField 
+          className="era-filtros-box"
           select
-          label="Proyecto"
           defaultValue="proj2"
           // SelectProps={{
           //   native: true,
           // }}
-          helperText="Seleccione un proyecto"
         >
           {projectFilter.map((option) => (
             <option key={option.value} value={option.value}>

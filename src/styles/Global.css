@@ -1,13 +1,163 @@
-/* Textos */
-.era-header{
-    font-size: 60px;
-    color: #0d0d00;
+/* Background Color */
+.era-background-light {
+    background: #F0F0F0;
 }
+
+.era-background-dark {
+    background: #4D4D4D;
+}
+
+/* Mergins */
+.era-margins {
+    margin-left: 96px;
+    margin-right: 96px;
+    margin-bottom: 50px;
+}
+
+/* Banners */
+.era-banner-img {
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/* Textos General - Light Mode*/
+.era-header {
+    font-size: 48px;
+    color: #333333;
+    text-align: left;
+    font-weight: 800;
+}
+.era-subheader {
+    font-size: 36px;
+    color: #333333;
+    text-align: left;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.era-links {
+    font-size: 16px;
+    color: #C52633;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.era-linkback {
+    font-size: 16px;
+    color: #808080;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.era-textbody {
+    font-size: 16px;
+    color: #333333;
+    font-weight: normal;
+}
+
+/* Textos General - Dark Mode*/
+.era-header-dark {
+    font-size: 48px;
+    color: #FFFFFF;
+    text-align: left;
+    font-weight: 800;
+}
+.era-subheader-dark {
+    font-size: 36px;
+    color: #FFFFFF;
+    text-align: left;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.era-links-dark {
+    font-size: 16px;
+    color: #FCC062;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.era-linkback-dark {
+    font-size: 16px;
+    color: #808080;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.era-textbody-dark {
+    font-size: 16px;
+    color: #F0F0F0;
+    font-weight: normal;
+}
+
+/* Links Elements */
+.era-linkscontainer {
+    display: flex;
+    align-items: center;
+}
+
 /* PDFs */
 .era-pdfcontainer {
     display: flex;
+    align-items: center;
 }
-/* PDFs Links */
-.era-pdflink {
-    color: #0d0d00;
+.era-pdf-subheader {
+    font-size: 36px;
+    color: #C52633;
+    text-align: left;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.era-pdf-link {
+    color: #333333;
+    text-decoration: none;
+}
+.era-pdf-description {
+    margin-left: 15px;
+}
+.era-pdf-img {
+    max-width: 345px;
+}
+
+/* Filtros */
+.era-filtros-container {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    margin-left: 0px;
+}
+.era-filtros-box {
+    box-sizing: content-box;
+    outline: none;
+    margin-left: 10px;
+}
+
+/* Global */
+h1 {
+    font-size: 48px;
+    color: #333333;
+    text-align: left;
+    font-weight: 900;
+}
+h2 {
+    font-size: 36px;
+    color: #333333;
+    text-align: left;
+    font-weight: 700;
+}
+p{
+    font-size: 16px;
+    color: #333333;
+    text-align: left;
+    font-weight: normal;
 }

@@ -13,6 +13,8 @@ import {
   tableCellClasses,
 } from "@mui/material";
 import React from "react";
+import "../../styles/Global.css"
+import "../../styles/CompanyStyles.css"
 
 export function CompanyProjects() {
   const StyledTableCell = styled(TableCell)(() => ({
@@ -123,9 +125,9 @@ export function CompanyProjects() {
   ];
 
   return (
-    <section>
-      <h3>Proyectos en Colombia</h3>
-      <div>
+    <section className="era-margins">
+      <h3 className="era-subheader">Proyectos en Colombia</h3>
+      <div className="era-filtros-container">
         <span>Filtrar por: </span>
         <TextField
           id="outlined-select-currency"
@@ -159,7 +161,7 @@ export function CompanyProjects() {
       </div>
       <div>
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: "720px", maxWidth:"1080px"}} aria-label="customized table">
+          <Table sx={{ minWidth: "720px"}} aria-label="customized table">
             <TableHead>
               <TableRow>
                 <StyledTableCell align="center">País</StyledTableCell>
