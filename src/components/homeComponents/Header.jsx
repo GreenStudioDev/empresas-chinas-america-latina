@@ -1,13 +1,25 @@
-import React from "react";
+// import React, { useEffect, useState } from "react";
 import "../../styles/Global.css"
 import "../../styles/HomeStyles.css"
 import { Link } from "react-router-dom";
+// import { CompanyInfo } from "../../api";
+
 
 export function Header() {
+// const [companyData, setCompanyData] = useState()
+// console.log("🚀 ~ file: Header.jsx:10 ~ Header ~ companyData:", companyData)
+
+// useEffect(() => {
+  
+//     setCompanyData(CompanyInfo()?.CompaniesInfo?.companies)
+
+// }, [])
+
+
   return (
-    <section>
+    <section style={{zIndex: 1, position: "relative"}}>
       <div className="home-description-container">
-        <h1>Participación de empresas chinas en la región Andina</h1>
+        <span className="era-header">Participación de empresas chinas en la región Andina</span>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elii.Lorem ipsum
           dolor sit amet, Lorem ipsum dolor sit amet, consectetuer adipiscing
