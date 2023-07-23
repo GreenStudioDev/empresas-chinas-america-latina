@@ -5,7 +5,7 @@ import "../../styles/ProjectStyles.css"
 export function ProjectCorruption() {
   return (
     <section className="era-margins">
-      <h3 className="era-subheader">Corrupción e Irregularidades</h3>
+      <h2>Corrupción e Irregularidades</h2>
       <div className="era-project-description">
         <p>Sobrecostos</p>
         <p>Irregularidades asociadas a la empresa RPCh en país receptor.</p>

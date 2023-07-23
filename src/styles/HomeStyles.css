@@ -1,11 +1,27 @@
-/*Container*/
+/*Description Container*/
 .home-description-container{
     position: fixed;
-    margin-top: 0;
+    z-index: 1;
+    top: 0;
     padding-left: 96px;
     padding-right: 96px;
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #e4e4e4c8;
-    height: 350px;
+    height: auto;
+}
+
+/*Filters Container*/
+.home-filters-container {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #e4e4e4c8;
+    height: auto;
+    display: flex;
+    align-items: center;
 }

@@ -24,21 +24,29 @@
     margin-bottom: 50px;
 }
 
-/* Textos General - Light Mode*/
-.era-header {
+/* Textos Global - Light */
+h1 {
     font-size: 48px;
     color: #333333;
     text-align: left;
-    font-weight: 800;
+    font-weight: 900;
+    margin: 0;
 }
-.era-subheader {
+h2 {
     font-size: 36px;
     color: #333333;
     text-align: left;
-    font-weight: bolder;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-weight: 700;
+    margin: 0;
 }
+p {
+    font-size: 16px;
+    color: #333333;
+    text-align: left;
+    font-weight: normal;
+}
+
+/* Links Global - Light Mode*/
 .era-links {
     font-size: 16px;
     color: #C52633;
@@ -47,7 +55,7 @@
     align-items: center;
     text-decoration: none;
 }
-.era-linkback {
+.era-link-back {
     font-size: 16px;
     color: #808080;
     font-style: normal;
@@ -56,7 +64,7 @@
     display: flex;
     align-items: center;
 }
-.era-textbody {
+.era-text-body {
     font-size: 16px;
     color: #333333;
     font-weight: normal;
@@ -140,24 +148,4 @@
     box-sizing: content-box;
     outline: none;
     margin-left: 10px;
-}
-
-/* Global */
-h1 {
-    font-size: 48px;
-    color: #333333;
-    text-align: left;
-    font-weight: 900;
-}
-h2 {
-    font-size: 36px;
-    color: #333333;
-    text-align: left;
-    font-weight: 700;
-}
-p{
-    font-size: 16px;
-    color: #333333;
-    text-align: left;
-    font-weight: normal;
 }

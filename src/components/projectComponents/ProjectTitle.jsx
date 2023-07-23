@@ -9,7 +9,7 @@ export function ProjectTitle() {
      <img className="era-banner-img" src="https://lh3.googleusercontent.com/pw/AIL4fc9OPEExLFhZaD8AlmG5rnNgeKYZyh1AySgdmRNRFKAQmr5Y-gj3IjXZMumxL8WZYA5tX01EPSMbJ_QzC1CgUtHhVQftWxEMMDiHjM4BMTpIUmtwjcxAux1Z-s018-Mjpcnhic-lXQ0l-b2YYWvG9xLmSHVF8Egsad3ANblHFN3HdfaXnq-7M7cYhmftRh_8T5H1LN4aHD9EBVL758kL66zS56fOSVEqN6c9T6He1Dibvb0wPfbtgaUQrQ7gLNY032NIMVRFkTsU1nhnW217Nn-gRzZJG51DYXr47h8wLbnMX7GnpgZ1BxdBQ70Zr2xPu01Q5F-hVcxaTB-HmLd8_xpJt8_mEvLIB2aQ7tD0yz9Sk32fN5Y_sZUV9fEY8ekvTRzemqqORr1crgmvE6K3Xf4vbd6-WzmAHKm-NDeJSRmrrReKeTZGzoPc3UKPKR_P1nBgTOdTK_X-YgpnUs9QLZw6c8v9yr8PbcXToa1NSPfi1frXt_0Igdokb8IGa5swAbaxVIQuldRbupms45nc2j3THfkkplJscFl9iOLG-gdLIQSkN3KXNrk7wheFFyGTgHTmfrGQJxjxBrobKjG-pUhGI5MVZ1B8VeVxRZxuhhOU5hT6GkHEgE-nC3uHASWCeH35qlMLiWtJsr7Mdl_gioD67K3URaYpc1bY_o02j64pj4jWWIpCL9DjUmU7DaXTIbsvOyI-T_XVthtpy4S1VNhPHQddsdKdknZjhv5uoun4sk_pp2pGVWI5TGQ_NXRyrjq1lTHIBaYf_7s6JQvmYE8xYrfR2nlhlV8bpmvmjfcOVIMEUxqUBFCYbxk5lcTom8HuxM4KjcJz09KrV5DxHVkl5ITYvA9A-698a1O0mPpLkwwCSz_t6xY5H0IMXAls_VUyAuhE5IkR7HJ7tympw-sEB-ifZAmIlecBZu8hAxySbz1UbnQa86PWn9330bPbnPYebq2_Ats_YAcbSTakWD50ZNOz6OOCQA=w2846-h630-s-no?authuser=0" alt="Project banner" />
       <div className="era-margins">
         <div>
-            <Link className="era-linkback" to={"/empresas-region-andina"}>
+            <Link className="era-link-back" to={"/empresas-region-andina"}>
               <ArrowBack /> Regresar a la página anterior
             </Link>
           </div>

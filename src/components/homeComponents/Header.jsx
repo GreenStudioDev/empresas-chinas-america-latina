@@ -7,7 +7,7 @@ export function Header() {
   return (
     <section>
       <div className="home-description-container">
-        <text className="era-header">Participación de empresas chinas en la región Andina</text>
+        <h1>Participación de empresas chinas en la región Andina</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elii.Lorem ipsum
           dolor sit amet, Lorem ipsum dolor sit amet, consectetuer adipiscing

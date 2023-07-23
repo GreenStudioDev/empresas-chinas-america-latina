@@ -116,7 +116,7 @@ export function CountryProjects() {
 
   return (
     <section className="era-margins">
-      <h3 className="era-subheader">Proyectos en Colombia</h3>
+      <h2>Proyectos en Colombia</h2>
       <div className="era-filtros-container">
         <span>Filtrar por: </span>
         <TextField className="era-filtros-box"
