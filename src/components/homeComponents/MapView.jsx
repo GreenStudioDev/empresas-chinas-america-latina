@@ -140,7 +140,7 @@ export function MapView({ setTooltipContent }) {
           <div className="era-home-country-close" style={{ cursor: "pointer" }} onClick={handleClose}>
             <span className="era-link-back-home">X</span>
           </div>
-          <img src={countryInfo?.COUNTRY_BANNER_MAP} alt="banner pais click" />
+          <img style={{width:"100%"}} src={countryInfo?.COUNTRY_BANNER_MAP} alt="banner pais click" />
           <div style={{padding:"25px"}}>
             <div className="era-home-title-container">
               <h1 className="era-h1">{countryNameSpa}</h1>
