@@ -18,8 +18,8 @@ export function Header() {
 
   return (
     <section style={{zIndex: 1, position: "relative"}}>
-      <div className="home-description-container">
-        <span className="era-header">Participación de empresas chinas en la región Andina</span>
+      <div className="era-home-description-container">
+        <span className="era-h1">Participación de empresas chinas en la región Andina</span>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elii.Lorem ipsum
           dolor sit amet, Lorem ipsum dolor sit amet, consectetuer adipiscing

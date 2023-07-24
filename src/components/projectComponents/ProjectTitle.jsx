@@ -23,7 +23,7 @@ export function ProjectTitle() {
      <img className="era-banner-img" src="https://fundacionandresbello.org/era-banner-placeholder/" alt="Project banner" />
       <div className="era-margins">
         <div>
-            <Link className="era-linkback" to={"/empresas-region-andina"}>
+            <Link className="era-link-back" to={"/empresas-region-andina"}>
               <ArrowBack /> Regresar a la página anterior
             </Link>
           </div>

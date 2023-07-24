@@ -30,25 +30,25 @@ export function CountryTitle() {
         <img className="era-banner-img" src={countryInfo?.COUNTRY_BANNER_PROFILE} alt="Country banner" />
       </div>
       <div className="era-margins">
-        <Link to={"/empresas-region-andina"} className="era-linkback">
+        <Link to={"/empresas-region-andina"} className="era-link-back">
           <ArrowBack />
           Regresar a la página anterior
         </Link>
         <div className="era-title-container">
-          <h1>{countryInfo?.COUNTRY_NAME_SPA}</h1>
+          <h1 className="era-h1">{countryInfo?.COUNTRY_NAME_SPA}</h1>
           <img className="era-title-flag" src={countryInfo?.COUNTRY_FLAG} alt="Flag" />
         </div>
         <div>
           <div>
             <span>N° Empresas: </span>
-            <span>{countryFilterInfo.length}</span>
+            <span className="era-sector-description"> #{countryFilterInfo.length}</span>
           </div>
           <div className="era-sector-container">
             {countryFilterInfo.map((info) => {
               return (
                 <p key={`sectors-${info?.COM_ID}`}>
-                  sectores: {info?.SECTOR_NAME_SPA}
-                  <img
+                  sectores: <span className="era-sector-description">{info?.SECTOR_NAME_SPA}</span>
+                  <img className="era-sector-icon"
                     src={info?.ICON}
                     alt="sector-logo"
                   />

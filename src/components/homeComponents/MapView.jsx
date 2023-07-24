@@ -60,7 +60,7 @@ export function MapView({ setTooltipContent }) {
       rotate: [70, 0, 0],
       scale: 65,
     });
-    setMapStyle({ width: "50%", marginTop: "-55px", position: "relative" });
+    setMapStyle({ width: "50%", marginTop: "-55px", position: "relative", height: "670px" });
     setInfoStyle({ width: "50%", position: "relative" });
   };
 
@@ -90,8 +90,6 @@ export function MapView({ setTooltipContent }) {
     >
       <div style={mapStyle}>
         <ComposableMap
-          // height={windowSize.height ? windowSize.height * 0.98 : 500}
-          // width={windowSize.width ? windowSize.width * 0.98 : 500}
           projection="geoAzimuthalEqualArea"
           projectionConfig={projectionConfig}
         >
@@ -121,7 +119,7 @@ export function MapView({ setTooltipContent }) {
                         }
                         value={geo.properties.COUNTRY_ID}
                         stroke="#D6D6DA"
-                        strokeWidth="0.2"
+                        strokeWidth="0.1"
                         onClick={handleClick(
                           geo,
                           projection,
@@ -139,29 +137,31 @@ export function MapView({ setTooltipContent }) {
       </div>
       {countryNames.includes(countryInfo?.COUNTRY_NAME_ENG) ? (
         <div style={infoStyle}>
-          <div style={{ cursor: "pointer" }} onClick={handleClose}>
-            X
+          <div className="era-home-country-close" style={{ cursor: "pointer" }} onClick={handleClose}>
+            <span className="era-link-back-home">X</span>
           </div>
-          <img src={countryInfo?.COUNTRY_BANNER_MAP} alt="banner pais click" />
-          <div>
-            <div>
-              <img src={countryInfo?.COUNTRY_FLAG} alt="country-flag" />
-              <h3>{countryNameSpa}</h3>
+          <img style={{width:"100%"}} src={countryInfo?.COUNTRY_BANNER_MAP} alt="banner pais click" />
+          <div style={{padding:"25px"}}>
+            <div className="era-home-title-container">
+              <h1 className="era-h1">{countryNameSpa}</h1>
+              <img className="era-home-title-flag" src={countryInfo?.COUNTRY_FLAG} alt="country-flag" />
             </div>
             <div>
-              <p>Número de empresas: {countryFilterInfo.length}</p>
+              <p>Número de empresas:<span className="era-home-sector-description"> #{countryFilterInfo.length} </span></p>
               {countryFilterInfo.map((info) => {
                 return (
+                  <div className="era-home-sector-container">
                   <p key={`sectors-${info?.COM_ID}`}>
-                    sectores: {info?.SECTOR_NAME_SPA}
-                    <img src={info?.ICON} alt="sector-logo" />
+                    sectores: <span className="era-home-sector-description">{info?.SECTOR_NAME_SPA}</span>
+                    <img className="era-home-sector-icon" src={info?.ICON} alt="sector-logo" />
                   </p>
+                  </div>
                 );
               })}
-              <p>Principales Importaciones: {countryInfo?.MAIN_IMPORTS_SPA} </p>
-              <p>Principales Exportaciones: {countryInfo?.MAIN_EXPORTS_SPA} </p>
+              <p className="era-p">Principales Importaciones:<span className="era-home-sector-description"> {countryInfo?.MAIN_IMPORTS_SPA} </span></p>
+              <p className="era-p">Principales Exportaciones:<span className="era-home-sector-description"> {countryInfo?.MAIN_EXPORTS_SPA} </span></p>
             </div>
-            <Link
+            <Link className="era-links"
               to={`/empresas-region-andina/country/${countryInfo?.COUNTRY_NAME_ENG}`}
             >
               Visitar el perfil del país{" "}

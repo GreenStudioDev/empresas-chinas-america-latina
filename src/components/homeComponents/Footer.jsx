@@ -1,9 +1,9 @@
+import "../../styles/Global.css"
+import "../../styles/HomeStyles.css"
+import { Link } from "react-router-dom";
 import React, { useContext, useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-// import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import { MenuItem, TextField } from "@mui/material";
 import { countriesContext, projectsContext } from "../../context";
-import { Link } from "react-router-dom";
 
 export function Footer() {
   const { countries_Companies } = useContext(countriesContext);
@@ -26,22 +26,23 @@ export function Footer() {
 
   return (
     <section>
-      <div
+      <div className="era-home-filters-container"
         style={{
           display: "flex",
           justifyContent: "space-evenly",
           alignItems: "center",
+          width: "100%",
         }}
       >
         <span>Buscar por: </span>
-        <TextField
+        <TextField className="era-home-filters-label"
           id="companies"
           select
           variant="standard"
-          label="Seleccione una empresa"
+          label="Empresa"
           defaultValue=""
           // helperText="Seleccione una empresa"
-          sx={{ width: "30%" }}
+          sx={{ width: "20%" }}
         >
           {comapniesInfo.map((name) => (
             <Link to={`/empresas-region-andina/company/${name}`} key={name}>
@@ -54,14 +55,14 @@ export function Footer() {
         <TextField
           id="projects"
           select
-          label="Seleccione un proyecto"
+          label="Proyecto"
           variant="standard"
           defaultValue=""
           // SelectProps={{
           //   native: true,
           // }}
           // helperText="Please select your currency"
-          sx={{ width: "30%" }}
+          sx={{ width: "20%" }}
         >
           {projectsInfo.map((name) => (
             <Link to={`/empresas-region-andina/project/${name}`} key={name}>
