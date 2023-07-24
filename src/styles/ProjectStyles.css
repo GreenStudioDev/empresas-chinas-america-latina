@@ -1,0 +1,48 @@
+/*Descripción Proyecto*/
+.era-project-description {
+    font-weight: bold;
+}
+.era-sector-container {
+    display: flex;
+    align-items: center;
+}
+.era-sector-icon {
+    margin-left: 5px;
+    color: #333333;
+}
+.era-sector-icon-dark {
+    margin-left: 5px;
+    color: #fff;
+}
+.era-flag-icon {
+    margin-left: 5px;
+    max-height: 25px;
+    color: #333333;
+}
+
+/*Sección Empresas*/
+.era-company-container {
+    display: flex;
+    align-items: center;
+}
+.era-company-logo-container {
+    width: 172px;
+    height: 172px;
+    align-content: center;
+}
+.era-company-logo {
+    max-width: 172px;
+    max-height: 172px;
+    align-content: center;
+}
+.era-company-description {
+    margin-left: 25px;
+    font-weight: normal;
+}
+.era-company-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.era-company-text {
+    font-weight: bold;
+}

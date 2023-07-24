@@ -1,0 +1,6 @@
+.era-geo-fill:focus {
+    outline: none;
+    fill: #ffcc66;
+    stroke:#ffffff;
+    stroke-width: 0.3
+}
