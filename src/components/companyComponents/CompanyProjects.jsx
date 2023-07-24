@@ -1,5 +1,5 @@
 import {
-  MenuItem,
+//   MenuItem,
   Paper,
   Table,
   TableBody,
@@ -7,7 +7,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  TextField,
+//   TextField,
   styled,
   tableCellClasses,
 } from "@mui/material";
@@ -79,7 +79,7 @@ export function CompanyProjects() {
     createData(
       project?.COUNTRY_NAME_SPA,
       <Link to={`/empresas-region-andina/project/${project?.PROJECT_NAME_SPA}`}>
-      {project?.PROJECT_NAME_SPA}
+        {project?.PROJECT_NAME_SPA}
       </Link>,
       <div>
         <img style={{ height: "40px" }} src={project?.ICON} alt="sector icon" />
@@ -93,40 +93,42 @@ export function CompanyProjects() {
     )
   );
 
-  const companyFilter = [
-    {
-      value: "comp1",
-      label: "Empresa 1",
-    },
-    {
-      value: "comp2",
-      label: "Empresa 2",
-    },
-  ];
+//   const companyFilter = [
+//     {
+//       value: "comp1",
+//       label: "Empresa 1",
+//     },
+//     {
+//       value: "comp2",
+//       label: "Empresa 2",
+//     },
+//   ];
 
-  const projectFilter = [
-    {
-      value: "proj1",
-      label: "Proyecto 1",
-    },
-    {
-      value: "proj2",
-      label: "Proyecto 2",
-    },
-    {
-      value: "proj3",
-      label: "Proyecto 3",
-    },
-    {
-      value: "proj4",
-      label: "Proyecto 4",
-    },
-  ];
+//   const projectFilter = [
+//     {
+//       value: "proj1",
+//       label: "Proyecto 1",
+//     },
+//     {
+//       value: "proj2",
+//       label: "Proyecto 2",
+//     },
+//     {
+//       value: "proj3",
+//       label: "Proyecto 3",
+//     },
+//     {
+//       value: "proj4",
+//       label: "Proyecto 4",
+//     },
+//   ];
 
   return (
     <section className="era-margins">
-      <h3 className="era-subheader">Proyectos de {projectInfo?.COMPANY_NAME} </h3>
-      <div className="era-filtros-container">
+      <h3 className="era-subheader">
+        Proyectos de {projectInfo?.COMPANY_NAME}{" "}
+      </h3>
+      {/* <div className="era-filtros-container">
         <span>Filtrar por: </span>
         <TextField
           id="outlined-select-currency"
@@ -157,7 +159,7 @@ export function CompanyProjects() {
             </MenuItem>
           ))}
         </TextField>
-      </div>
+      </div> */}
       <div>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: "720px" }} aria-label="customized table">
@@ -188,9 +190,7 @@ export function CompanyProjects() {
                   <StyledTableCell align="center">
                     {row.projectName}
                   </StyledTableCell>
-                  <StyledTableCell align="center">
-                    {row.sector}
-                  </StyledTableCell>
+                  <StyledTableCell align="center">{row.sector}</StyledTableCell>
                   <StyledTableCell align="center">
                     {row.subsidiary}
                   </StyledTableCell>
