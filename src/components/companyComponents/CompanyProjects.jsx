@@ -89,7 +89,7 @@ export function CompanyProjects() {
       project?.LOCATION,
       project?.YEAR_OF_BEGENING,
       project?.CURRENT_STATUS_SPA,
-      `US$ ${parseInt(project?.PROJECT_AMMOUNT).toLocaleString("en-US")}`
+      project?.PROJECT_AMMOUNT === "N/D" ? "N/D" : `US$ ${parseInt(project?.PROJECT_AMMOUNT).toLocaleString("en-US")}`
     )
   );
 
