@@ -30,6 +30,7 @@
     color: #333333;
     text-align: left;
     font-weight: 900;
+    line-height: 48px;
     margin: 0;
 }
 .era-h2 {
@@ -37,6 +38,15 @@
     color: #333333;
     text-align: left;
     font-weight: 700;
+    line-height: 36px;
+    margin: 0;
+}
+.era-h3 {
+    font-size: 36px;
+    color: #C52633;
+    text-align: left;
+    font-weight: 700;
+    line-height: 36px;
     margin: 0;
 }
 .era-p {
@@ -44,6 +54,7 @@
     color: #333333;
     text-align: left;
     font-weight: normal;
+    line-height: 16px;
 }
 
 /* Links Global - Light Mode*/

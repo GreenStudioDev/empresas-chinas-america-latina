@@ -8,6 +8,7 @@ import {
 import "../../styles/mapStyles.css";
 import { countriesContext } from "../../context";
 import { Link } from "react-router-dom";
+import { padding } from "@mui/system";
 
 export function MapView({ setTooltipContent }) {
   const { countries_Companies } = useContext(countriesContext);
@@ -139,29 +140,31 @@ export function MapView({ setTooltipContent }) {
       </div>
       {countryNames.includes(countryInfo?.COUNTRY_NAME_ENG) ? (
         <div style={infoStyle}>
-          <div style={{ cursor: "pointer" }} onClick={handleClose}>
-            X
+          <div className="era-home-country-close" style={{ cursor: "pointer" }} onClick={handleClose}>
+            <text className="era-link-back-home">X</text>
           </div>
           <img src={countryInfo?.COUNTRY_BANNER_MAP} alt="banner pais click" />
-          <div>
-            <div>
-              <img src={countryInfo?.COUNTRY_FLAG} alt="country-flag" />
-              <h3>{countryNameSpa}</h3>
+          <div style={{padding:"25px"}}>
+            <div className="era-home-title-container">
+              <h1 className="era-h1">{countryNameSpa}</h1>
+              <img className="era-home-title-flag" src={countryInfo?.COUNTRY_FLAG} alt="country-flag" />
             </div>
             <div>
-              <p>Número de empresas: {countryFilterInfo.length}</p>
+              <p>Número de empresas:<span className="era-home-sector-description"> #{countryFilterInfo.length} </span></p>
               {countryFilterInfo.map((info) => {
                 return (
+                  <div className="era-home-sector-container">
                   <p key={`sectors-${info?.COM_ID}`}>
-                    sectores: {info?.SECTOR_NAME_SPA}
-                    <img src={info?.ICON} alt="sector-logo" />
+                    sectores: <span className="era-home-sector-description">{info?.SECTOR_NAME_SPA}</span>
+                    <img className="era-home-sector-icon" src={info?.ICON} alt="sector-logo" />
                   </p>
+                  </div>
                 );
               })}
-              <p>Principales Importaciones: {countryInfo?.MAIN_IMPORTS_SPA} </p>
-              <p>Principales Exportaciones: {countryInfo?.MAIN_EXPORTS_SPA} </p>
+              <p className="era-p">Principales Importaciones:<span className="era-home-sector-description"> {countryInfo?.MAIN_IMPORTS_SPA} </span></p>
+              <p className="era-p">Principales Exportaciones:<span className="era-home-sector-description"> {countryInfo?.MAIN_EXPORTS_SPA} </span></p>
             </div>
-            <Link
+            <Link className="era-links"
               to={`/empresas-region-andina/country/${countryInfo?.COUNTRY_NAME_ENG}`}
             >
               Visitar el perfil del país{" "}

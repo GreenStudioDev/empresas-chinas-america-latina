@@ -12,7 +12,6 @@
 /*Filters Container*/
 .era-home-filters-container {
     /* position: fixed; */
-    position: fixed;
     bottom: 0;
     padding-right: 96px;
     padding-top: 25px;
@@ -24,15 +23,35 @@
 .era-home-country-container {
     background-color: #e4e4e4c8;
 }
+.era-home-country-close {
+    position: relative;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.era-link-back-home {
+    font-size: 16px;
+    color: #cccccc;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 /*Descripción País*/
+.era-home-title-container {
+    display: flex;
+    align-items: center;
+}
+.era-home-title-flag {
+    height: 42px;
+    margin-left: 5px;
+}
 .era-home-sector-container {
     display: flex;
     align-items: center;
 }
 .era-home-sector-icon {
     margin-left: 5px;
-    max-height: 35px;
+    height: 25px;
     color: #333333;
 }
 .era-home-sector-icon-dark {
@@ -41,10 +60,4 @@
 }
 .era-home-sector-description {
     font-weight: bold;
-}
-.era-home-sector-status {
-    font-style: italic;
-    font-weight: 600;
-    font-size: 14px;
-    margin-left: 25px;
 }
