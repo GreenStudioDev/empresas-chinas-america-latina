@@ -19,8 +19,8 @@ export function ProjectCorruption() {
       <h3 className="era-subheader">Corrupción e Irregularidades</h3>
       <div className="era-project-description">
         <p>
-        {projectInfo.SUMMARY_OF_IRREGULARITIES_SPA !== ""
-          ? projectInfo.SUMMARY_OF_IRREGULARITIES_SPA
+        {projectInfo?.SUMMARY_OF_IRREGULARITIES_SPA !== ""
+          ? projectInfo?.SUMMARY_OF_IRREGULARITIES_SPA
           : "No hay información"}
         </p>
       </div>

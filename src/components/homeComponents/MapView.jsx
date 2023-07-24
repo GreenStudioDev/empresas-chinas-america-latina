@@ -20,10 +20,6 @@ export function MapView({ setTooltipContent }) {
   const [countryName, setCountryName] = useState("");
   const [countryNameSpa, setCountryNameSpa] = useState("");
   const [countryInfo, setCountryInfo] = useState([]);
-  console.log(
-    "🚀 ~ file: MapView.jsx:22 ~ MapView ~ countryInfo:",
-    countryInfo
-  );
   const [countryFilterInfo, setCountryFilterInfo] = useState([]);
   const [mapStyle, setMapStyle] = useState({
     width: "100%",
@@ -173,7 +169,7 @@ export function MapView({ setTooltipContent }) {
           </div>
         </div>
       ) : (
-        <div>
+        <div style={infoStyle}>
           <h3>{countryNameSpa}</h3>
           <p>No hay información disponible por el momento</p>
         </div>

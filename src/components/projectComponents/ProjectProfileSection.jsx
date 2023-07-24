@@ -18,7 +18,7 @@ export function ProjectProfileSection() {
   return (
     <section>
     <div className="era-margins">
-      <a className="era-pdf-link" href="http://" target="_blank" rel="noopener noreferrer">
+      <a className="era-pdf-link" href={projectInfo?.PROJECT_PROFILE_LINK} target="_blank" rel="noopener noreferrer">
         <div className="era-pdfcontainer">
           <img className="era-pdf-img" src="" alt="profile cover" />
           <div className="era-pdf-description">

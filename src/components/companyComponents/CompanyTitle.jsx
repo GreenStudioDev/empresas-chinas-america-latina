@@ -12,10 +12,6 @@ export function CompanyTitle() {
   const [companyInfo, setCompanyInfo] = useState([]);
   const [companyFilterInfo, setCompanyFilterInfo] = useState([]);
   const [subsidiaryInfo, setSubsidiaryInfo] = useState([]);
-  console.log(
-    "🚀 ~ file: CompanyTitle.jsx:15 ~ CompanyTitle ~ subsidiaryInfo:",
-    subsidiaryInfo
-  );
 
   useEffect(() => {
     const info = countries_Companies.find(

@@ -10,10 +10,6 @@ export function Footer() {
   const { projects } = useContext(projectsContext);
   const [comapniesInfo, setComapniesInfo] = useState([]);
   const [projectsInfo, setProjectsInfo] = useState([]);
-  console.log(
-    "🚀 ~ file: Footer.jsx:14 ~ Footer ~ projectsInfo:",
-    projectsInfo
-  );
 
   useEffect(() => {
     const filetrInfo = [
@@ -48,8 +44,8 @@ export function Footer() {
           sx={{ width: "30%" }}
         >
           {comapniesInfo.map((name) => (
-            <Link to={`/empresas-region-andina/company/${name}`}>
-              <MenuItem key={name} value={name}>
+            <Link to={`/empresas-region-andina/company/${name}`} key={name}>
+              <MenuItem  value={name}>
                 {name}
               </MenuItem>
             </Link>
@@ -68,8 +64,8 @@ export function Footer() {
           sx={{ width: "30%" }}
         >
           {projectsInfo.map((name) => (
-            <Link to={`/empresas-region-andina/project/${name}`}>
-              <MenuItem key={name} value={name}>
+            <Link to={`/empresas-region-andina/project/${name}`} key={name}>
+              <MenuItem value={name}>
                 {name}
               </MenuItem>
             </Link>

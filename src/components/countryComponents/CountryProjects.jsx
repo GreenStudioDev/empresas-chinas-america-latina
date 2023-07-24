@@ -128,7 +128,7 @@ export function CountryProjects() {
   return (
     <section className="era-margins">
       <h3 className="era-subheader">
-        Proyectos en {projectInfo.COUNTRY_NAME_SPA}
+        Proyectos en {projectInfo?.COUNTRY_NAME_SPA}
       </h3>
       <div className="era-filtros-container">
         <span>Filtrar por: </span>
@@ -170,7 +170,7 @@ export function CountryProjects() {
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <StyledTableRow key={row.projectName}>
+                <StyledTableRow key={`countries-row-${projectInfo.PR_ID++}`}>
                   <StyledTableCell align="center">{row.sector}</StyledTableCell>
                   <StyledTableCell align="center">
                     {row.companyRpch}
