@@ -1,7 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import { eraInstance } from "../api";
 
-
 export const companiesContext = createContext();
 
 export function CompaniesProvider({ children }) {
@@ -162,21 +161,23 @@ export function CompaniesProvider({ children }) {
   }, []);
 
   return (
-    <companiesContext.Provider value={{
+    <companiesContext.Provider
+      value={{
         companies: companies,
         companies_Foreing_Investment: foreingInvestment,
         companies_Oil_Loans: oilLoans,
-              companies_Subsidiaries: subsidiaries,
-              companies_Comp_Operations: compOperations,
-              companies_Conglomerates: conglomerates,
-              companies_Gov_Inst_Relationship: govInstRelationship,
-              companies_Gov_Rep_Relationship: govRepRelationship,
-              companies_Purchases: purchases,
-              companies_Sales: sales,
-              companies_Services: services,
-              companies_Shareholders: shareholders,
-              companies_LinkedPeopleByCountry: linkedPeopleByCountry,
-      }}>
+        companies_Subsidiaries: subsidiaries,
+        companies_Comp_Operations: compOperations,
+        companies_Conglomerates: conglomerates,
+        companies_Gov_Inst_Relationship: govInstRelationship,
+        companies_Gov_Rep_Relationship: govRepRelationship,
+        companies_Purchases: purchases,
+        companies_Sales: sales,
+        companies_Services: services,
+        companies_Shareholders: shareholders,
+        companies_LinkedPeopleByCountry: linkedPeopleByCountry,
+      }}
+    >
       {children}
     </companiesContext.Provider>
   );

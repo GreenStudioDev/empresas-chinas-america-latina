@@ -1,19 +1,28 @@
-import React from "react";
-import "../../styles/Global.css"
-import "../../styles/ProjectStyles.css"
+import React, { useContext, useEffect, useState } from "react";
+import "../../styles/Global.css";
+import "../../styles/ProjectStyles.css";
+import { useParams } from "react-router";
+import { projectsContext } from "../../context";
 
 export function ProjectCorruption() {
+  const { project_name } = useParams();
+  const { projects } = useContext(projectsContext);
+  const [projectInfo, setProjectInfo] = useState([]);
+
+  useEffect(() => {
+    const info = projects.find((c) => c.PROJECT_NAME_SPA === project_name);
+    setProjectInfo(info);
+  }, [project_name, projects]);
+
   return (
     <section className="era-margins">
       <h2>Corrupción e Irregularidades</h2>
       <div className="era-project-description">
-        <p>Sobrecostos</p>
-        <p>Irregularidades asociadas a la empresa RPCh en país receptor.</p>
-        <p>Inconsistencias en las metas de producción planteadas / Logradas.</p>
-        <p>Reclamaciones Laborales  asociadas a la empresa RPCh en país receptor.</p>
-        <p>Reclamaciones Sociales  asociadas a la empresa RPCh en país receptor.</p>
-        <p>Reclamaciones Ambientales asociadas a la empresa RPCh en país receptor.</p>
-
+        <p>
+        {projectInfo?.SUMMARY_OF_IRREGULARITIES_SPA !== ""
+          ? projectInfo?.SUMMARY_OF_IRREGULARITIES_SPA
+          : "No hay información"}
+        </p>
       </div>
     </section>
   );

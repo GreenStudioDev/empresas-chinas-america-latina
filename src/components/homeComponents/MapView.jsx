@@ -20,7 +20,6 @@ export function MapView({ setTooltipContent }) {
   const [countryName, setCountryName] = useState("");
   const [countryNameSpa, setCountryNameSpa] = useState("");
   const [countryInfo, setCountryInfo] = useState([]);
-  console.log("🚀 ~ file: MapView.jsx:22 ~ MapView ~ countries_Companies:", countries_Companies)
   const [countryFilterInfo, setCountryFilterInfo] = useState([]);
   const [mapStyle, setMapStyle] = useState({
     width: "100%",
@@ -48,13 +47,13 @@ export function MapView({ setTooltipContent }) {
   const countryNames = [
     ...new Set(
       countries_Companies?.map((country) => country?.COUNTRY_NAME_ENG)
-    )]
-  console.log("🚀 ~ file: MapView.jsx:51 ~ MapView ~ countryNames:", countryNames)
+    ),
+  ];
 
   const handleClick = (geo, projection, path, geoProps, geoPropsSpa) => () => {
     const centroid = projection.invert(path.centroid(geo));
     setCountryName(geoProps);
-    setCountryNameSpa(geoPropsSpa)
+    setCountryNameSpa(geoPropsSpa);
     setCenter(centroid);
     setZoom(12);
     setProjectionConfig({
@@ -115,8 +114,11 @@ export function MapView({ setTooltipContent }) {
                         className="geo era-geo-fill"
                         key={geo.rsmKey}
                         geography={geo}
-                        fill={countryNames.includes(geo.properties.NAME_EN) ? "#cc3333" : "#999999"}
-
+                        fill={
+                          countryNames.includes(geo.properties.NAME_EN)
+                            ? "#cc3333"
+                            : "#999999"
+                        }
                         value={geo.properties.COUNTRY_ID}
                         stroke="#D6D6DA"
                         strokeWidth="0.1"
@@ -135,43 +137,43 @@ export function MapView({ setTooltipContent }) {
           </ZoomableGroup>
         </ComposableMap>
       </div>
-      <div style={infoStyle}>
-        <div className="era-link-back" style={{ cursor: "pointer" }} onClick={handleClose}>
-          X
-        </div>
-        <img src="" alt="banner pais click" />
-        <div>
-          <div style={{display:"flex",alignItems:"center"}}>
-            <h3 className="era-h1">{countryNameSpa}</h3>
-            <img src="" alt="country-flag" />
+      {countryNames.includes(countryInfo?.COUNTRY_NAME_ENG) ? (
+        <div style={infoStyle}>
+          <div style={{ cursor: "pointer" }} onClick={handleClose}>
+            X
           </div>
+          <img src={countryInfo?.COUNTRY_BANNER_MAP} alt="banner pais click" />
           <div>
-            <p>Número de empresas: {countryFilterInfo.length}</p>
-            {countryFilterInfo.map((info) => {
-              return (
-                <div className="era-home-sector-container">
-                <p key={`sectors-${info?.COM_ID}`}>
-                  sectores: {info?.SECTOR_NAME_SPA}
-                  <img className="era-home-sector-icon"
-                    src={info?.ICON}
-                    alt="sector-logo"
-                  />
-                </p>
-                </div>
-              );
-            })}
-            <p>
-              Principales Importaciones: {countryInfo?.MAIN_IMPORTS_SPA}{" "}
-            </p>
-            <p>
-              Principales Exportaciones: {countryInfo?.MAIN_EXPORTS_SPA}{" "}
-            </p>
+            <div>
+              <img src={countryInfo?.COUNTRY_FLAG} alt="country-flag" />
+              <h3>{countryNameSpa}</h3>
+            </div>
+            <div>
+              <p>Número de empresas: {countryFilterInfo.length}</p>
+              {countryFilterInfo.map((info) => {
+                return (
+                  <p key={`sectors-${info?.COM_ID}`}>
+                    sectores: {info?.SECTOR_NAME_SPA}
+                    <img src={info?.ICON} alt="sector-logo" />
+                  </p>
+                );
+              })}
+              <p>Principales Importaciones: {countryInfo?.MAIN_IMPORTS_SPA} </p>
+              <p>Principales Exportaciones: {countryInfo?.MAIN_EXPORTS_SPA} </p>
+            </div>
+            <Link
+              to={`/empresas-region-andina/country/${countryInfo?.COUNTRY_NAME_ENG}`}
+            >
+              Visitar el perfil del país{" "}
+            </Link>
           </div>
-          <Link className="era-links" to={`/empresas-region-andina/country/${countryInfo?.COUNTRY_NAME_ENG}`}>
-            Visitar el perfil del país{" "}
-          </Link>
         </div>
-      </div>
+      ) : (
+        <div style={infoStyle}>
+          <h3>{countryNameSpa}</h3>
+          <p>No hay información disponible por el momento</p>
+        </div>
+      )}
     </section>
   );
 }
