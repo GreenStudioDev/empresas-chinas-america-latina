@@ -8,7 +8,6 @@ import {
 import "../../styles/mapStyles.css";
 import { countriesContext } from "../../context";
 import { Link } from "react-router-dom";
-import { padding } from "@mui/system";
 
 export function MapView({ setTooltipContent }) {
   const { countries_Companies } = useContext(countriesContext);
@@ -61,7 +60,7 @@ export function MapView({ setTooltipContent }) {
       rotate: [70, 0, 0],
       scale: 65,
     });
-    setMapStyle({ width: "50%", marginTop: "-55px", position: "relative" });
+    setMapStyle({ width: "50%", marginTop: "-55px", position: "relative", height: "670px" });
     setInfoStyle({ width: "50%", position: "relative" });
   };
 
@@ -91,8 +90,6 @@ export function MapView({ setTooltipContent }) {
     >
       <div style={mapStyle}>
         <ComposableMap
-          // height={windowSize.height ? windowSize.height * 0.98 : 500}
-          // width={windowSize.width ? windowSize.width * 0.98 : 500}
           projection="geoAzimuthalEqualArea"
           projectionConfig={projectionConfig}
         >
@@ -141,7 +138,7 @@ export function MapView({ setTooltipContent }) {
       {countryNames.includes(countryInfo?.COUNTRY_NAME_ENG) ? (
         <div style={infoStyle}>
           <div className="era-home-country-close" style={{ cursor: "pointer" }} onClick={handleClose}>
-            <text className="era-link-back-home">X</text>
+            <span className="era-link-back-home">X</span>
           </div>
           <img src={countryInfo?.COUNTRY_BANNER_MAP} alt="banner pais click" />
           <div style={{padding:"25px"}}>

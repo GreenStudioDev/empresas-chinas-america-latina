@@ -25,8 +25,9 @@
 }
 .era-home-country-close {
     position: relative;
-    margin-left: 25px;
-    margin-top: 25px;
+    margin-left: 29px;
+    margin-bottom: -23px;
+    top: 17px;
 }
 .era-link-back-home {
     font-size: 16px;

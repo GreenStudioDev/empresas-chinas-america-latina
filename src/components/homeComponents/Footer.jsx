@@ -1,10 +1,7 @@
 import "../../styles/Global.css"
 import "../../styles/HomeStyles.css"
 import { Link } from "react-router-dom";
-import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import React, { useContext, useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-// import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import { MenuItem, TextField } from "@mui/material";
 import { countriesContext, projectsContext } from "../../context";
 
