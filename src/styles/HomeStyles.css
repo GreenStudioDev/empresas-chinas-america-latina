@@ -1,5 +1,5 @@
 /*Description Container*/
-.home-description-container{
+.era-home-description-container{
     /* position: fixed; */
     margin-top: 0;
     padding-left: 96px;
@@ -7,5 +7,44 @@
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #e4e4e4c8;
-    height: 138px;
+    height: auto;
+}
+/*Filters Container*/
+.era-home-filters-container {
+    /* position: fixed; */
+    position: fixed;
+    bottom: 0;
+    padding-right: 96px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #e4e4e4c8;
+    height: auto;
+}
+/*Country Info Container*/
+.era-home-country-container {
+    background-color: #e4e4e4c8;
+}
+
+/*Descripción País*/
+.era-home-sector-container {
+    display: flex;
+    align-items: center;
+}
+.era-home-sector-icon {
+    margin-left: 5px;
+    max-height: 35px;
+    color: #333333;
+}
+.era-home-sector-icon-dark {
+    margin-left: 5px;
+    color: #fff;
+}
+.era-home-sector-description {
+    font-weight: bold;
+}
+.era-home-sector-status {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 25px;
 }

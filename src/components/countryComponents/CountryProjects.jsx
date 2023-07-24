@@ -117,7 +117,13 @@ export function CountryProjects() {
   return (
     <section className="era-margins">
       <h2>Proyectos en Colombia</h2>
-      <div className="era-filtros-container">
+      <div className="era-filtros-container"
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+        }}
+      >
         <span>Filtrar por: </span>
         <TextField className="era-filtros-box"
           select
@@ -133,6 +139,7 @@ export function CountryProjects() {
           className="era-filtros-box"
           select
           defaultValue="proj2"
+          variant="standard"
           // SelectProps={{
           //   native: true,
           // }}

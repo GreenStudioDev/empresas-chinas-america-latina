@@ -119,7 +119,7 @@ export function MapView({ setTooltipContent }) {
 
                         value={geo.properties.COUNTRY_ID}
                         stroke="#D6D6DA"
-                        strokeWidth="0.2"
+                        strokeWidth="0.1"
                         onClick={handleClick(
                           geo,
                           projection,
@@ -136,26 +136,28 @@ export function MapView({ setTooltipContent }) {
         </ComposableMap>
       </div>
       <div style={infoStyle}>
-        <div style={{ cursor: "pointer" }} onClick={handleClose}>
+        <div className="era-link-back" style={{ cursor: "pointer" }} onClick={handleClose}>
           X
         </div>
         <img src="" alt="banner pais click" />
         <div>
-          <div>
+          <div style={{display:"flex",alignItems:"center"}}>
+            <h3 className="era-h1">{countryNameSpa}</h3>
             <img src="" alt="country-flag" />
-            <h3>{countryNameSpa}</h3>
           </div>
           <div>
             <p>Número de empresas: {countryFilterInfo.length}</p>
             {countryFilterInfo.map((info) => {
               return (
+                <div className="era-home-sector-container">
                 <p key={`sectors-${info?.COM_ID}`}>
                   sectores: {info?.SECTOR_NAME_SPA}
-                  <img
+                  <img className="era-home-sector-icon"
                     src={info?.ICON}
                     alt="sector-logo"
                   />
                 </p>
+                </div>
               );
             })}
             <p>
@@ -165,7 +167,7 @@ export function MapView({ setTooltipContent }) {
               Principales Exportaciones: {countryInfo?.MAIN_EXPORTS_SPA}{" "}
             </p>
           </div>
-          <Link to={`/empresas-region-andina/country/${countryInfo?.COUNTRY_NAME_ENG}`}>
+          <Link className="era-links" to={`/empresas-region-andina/country/${countryInfo?.COUNTRY_NAME_ENG}`}>
             Visitar el perfil del país{" "}
           </Link>
         </div>
