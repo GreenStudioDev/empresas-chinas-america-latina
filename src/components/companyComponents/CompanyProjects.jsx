@@ -1,4 +1,3 @@
-import { LocalShipping } from "@mui/icons-material";
 import {
   MenuItem,
   Paper,
@@ -12,11 +11,26 @@ import {
   styled,
   tableCellClasses,
 } from "@mui/material";
-import React from "react";
-import "../../styles/Global.css"
-import "../../styles/CompanyStyles.css"
+import React, { useContext, useEffect, useState } from "react";
+import "../../styles/Global.css";
+import "../../styles/CompanyStyles.css";
+import { useParams } from "react-router";
+import { projectsContext } from "../../context";
+import { Link } from "react-router-dom";
 
 export function CompanyProjects() {
+  const { company_name } = useParams();
+  const { projects } = useContext(projectsContext);
+  const [projectInfo, setProjectInfo] = useState([]);
+  const [projectFilterInfo, setProjectFilterInfo] = useState([]);
+
+  useEffect(() => {
+    const info = projects.find((c) => c?.COMPANY_NAME === company_name);
+    const filetrInfo = projects.filter((c) => c?.COMPANY_NAME === company_name);
+    setProjectInfo(info);
+    setProjectFilterInfo(filetrInfo);
+  }, [company_name, projects]);
+
   const StyledTableCell = styled(TableCell)(() => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: "#cc6666",
@@ -61,38 +75,23 @@ export function CompanyProjects() {
     };
   }
 
-  const rows = [
+  const rows = projectFilterInfo.map((project) =>
     createData(
-      "Bolivia",
-      "Carretera San Borja - San Ignacio de Moxos",
-      "Transporte",
-      "China Harbour Engineering Company Ltd. Bolivia",
-      "Beni",
-      "2016",
-      "Concluido",
-      "210.000.000"
-    ),
-    createData(
-      "Bolivia",
-      "Carretera dual Sucre - Yamparáez",
-      "Transporte",
-      "China Harbour Engineering Company Ltd. Bolivia",
-      "Chuquisaca",
-      "2022",
-      "En curso",
-      "65.000.000"
-    ),
-    createData(
-      "Bolivia",
-      "Rehabilitación de la carretera Santa Cruz - Trinidad - San Javier y Puerto Varador - Trinidad",
-      "Transporte",
-      "China Harbour Engineering Company Ltd. Bolivia",
-      "Santa Cruz, Beni",
-      "2018",
-      "En curso",
-      "71.000.000"
-    ),
-  ];
+      project?.COUNTRY_NAME_SPA,
+      <Link to={`/empresas-region-andina/project/${project?.PROJECT_NAME_SPA}`}>
+      {project?.PROJECT_NAME_SPA}
+      </Link>,
+      <div>
+        <img style={{ height: "40px" }} src={project?.ICON} alt="sector icon" />
+        {project?.SECTOR_NAME_SPA}
+      </div>,
+      project?.SUBSIDIARY_NAME,
+      project?.LOCATION,
+      project?.YEAR_OF_BEGENING,
+      project?.CURRENT_STATUS_SPA,
+      `US$ ${parseInt(project?.PROJECT_AMMOUNT).toLocaleString("en-US")}`
+    )
+  );
 
   const companyFilter = [
     {
@@ -126,7 +125,7 @@ export function CompanyProjects() {
 
   return (
     <section className="era-margins">
-      <h3 className="era-subheader">Proyectos en Colombia</h3>
+      <h3 className="era-subheader">Proyectos de {projectInfo?.COMPANY_NAME} </h3>
       <div className="era-filtros-container">
         <span>Filtrar por: </span>
         <TextField
@@ -153,15 +152,15 @@ export function CompanyProjects() {
           helperText="Seleccione un proyecto"
         >
           {projectFilter.map((option) => (
-            <option key={option.value} value={option.value}>
+            <MenuItem key={option.value} value={option.value}>
               {option.label}
-            </option>
+            </MenuItem>
           ))}
         </TextField>
       </div>
       <div>
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: "720px"}} aria-label="customized table">
+          <Table sx={{ minWidth: "720px" }} aria-label="customized table">
             <TableHead>
               <TableRow>
                 <StyledTableCell align="center">País</StyledTableCell>
@@ -182,7 +181,7 @@ export function CompanyProjects() {
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <StyledTableRow key={row.projectName}>
+                <StyledTableRow key={`projects-row-${projectInfo.PR_ID++}`}>
                   <StyledTableCell align="center">
                     {row.country}
                   </StyledTableCell>
@@ -190,7 +189,6 @@ export function CompanyProjects() {
                     {row.projectName}
                   </StyledTableCell>
                   <StyledTableCell align="center">
-                    <LocalShipping />
                     {row.sector}
                   </StyledTableCell>
                   <StyledTableCell align="center">

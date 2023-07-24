@@ -1,4 +1,3 @@
-import { LocalShipping } from "@mui/icons-material";
 import {
   MenuItem,
   Paper,
@@ -12,11 +11,28 @@ import {
   styled,
   tableCellClasses,
 } from "@mui/material";
-import React from "react";
-import "../../styles/CountryStyles.css"
-import "../../styles/Global.css"
+import React, { useContext, useEffect, useState } from "react";
+import "../../styles/CountryStyles.css";
+import "../../styles/Global.css";
+import { projectsContext } from "../../context";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 export function CountryProjects() {
+  const { country_name } = useParams();
+  const { projects } = useContext(projectsContext);
+  const [projectInfo, setProjectInfo] = useState([]);
+  const [projectFilterInfo, setProjectFilterInfo] = useState([]);
+
+  useEffect(() => {
+    const info = projects.find((c) => c.COUNTRY_NAME_ENG === country_name);
+    const filetrInfo = projects.filter(
+      (c) => c.COUNTRY_NAME_ENG === country_name
+    );
+    setProjectInfo(info);
+    setProjectFilterInfo(filetrInfo);
+  }, [country_name, projects]);
+
   const StyledTableCell = styled(TableCell)(() => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: "#cc6666",
@@ -61,28 +77,23 @@ export function CountryProjects() {
     };
   }
 
-  const rows = [
+  const rows = projectFilterInfo.map((project) =>
     createData(
-      "Transporte",
-      "China Harbour Engineering Company Ltd.",
-      "China Harbour Engineering Company Limited Colombia ",
-      "Autopista Al Mar 2",
-      "Departamento de Antioquia",
-      "2015",
-      "En curso",
-      "837.291.522,32"
-    ),
-    createData(
-      "Transporte",
-      "China Harbour Engineering Company Ltd.",
-      "China Harbour Engineering Company Limited Colombia ",
-      "Metro de Bogotá Línea 1",
-      "Bogotá, Distrito Capital",
-      "2020",
-      "En curso",
-      "4.750.505.184,70"
-    ),
-  ];
+      <div>
+        <img style={{ height: "40px" }} src={project?.ICON} alt="sector icon" />
+        {project?.SECTOR_NAME_SPA}
+      </div>,
+      <Link to={`/empresas-region-andina/company/${project?.COMPANY_NAME}`}>
+        {project?.COMPANY_NAME}
+      </Link>,
+      project?.SUBSIDIARY_NAME,
+      <Link to={`/empresas-region-andina/project/${project?.PROJECT_NAME_SPA}`}>{project?.PROJECT_NAME_SPA}</Link>,
+      project?.LOCATION,
+      project?.YEAR_OF_BEGENING,
+      project?.CURRENT_STATUS_SPA,
+      `US$ ${parseInt(project?.PROJECT_AMMOUNT).toLocaleString("en-US")}`
+    )
+  );
 
   const companyFilter = [
     {
@@ -116,27 +127,19 @@ export function CountryProjects() {
 
   return (
     <section className="era-margins">
-      <h3 className="era-subheader">Proyectos en Colombia</h3>
+      <h3 className="era-subheader">
+        Proyectos en {projectInfo.COUNTRY_NAME_SPA}
+      </h3>
       <div className="era-filtros-container">
         <span>Filtrar por: </span>
-        <TextField className="era-filtros-box"
-          select
-          defaultValue="comp1"
-        >
+        <TextField className="era-filtros-box" select defaultValue="comp1">
           {companyFilter.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
           ))}
         </TextField>
-        <TextField 
-          className="era-filtros-box"
-          select
-          defaultValue="proj2"
-          // SelectProps={{
-          //   native: true,
-          // }}
-        >
+        <TextField className="era-filtros-box" select defaultValue="proj2">
           {projectFilter.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}
@@ -168,10 +171,7 @@ export function CountryProjects() {
             <TableBody>
               {rows.map((row) => (
                 <StyledTableRow key={row.projectName}>
-                  <StyledTableCell align="center">
-                    <LocalShipping />
-                    {row.sector}
-                  </StyledTableCell>
+                  <StyledTableCell align="center">{row.sector}</StyledTableCell>
                   <StyledTableCell align="center">
                     {row.companyRpch}
                   </StyledTableCell>
