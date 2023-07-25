@@ -1,5 +1,5 @@
 import {
-  MenuItem,
+//   MenuItem,
   Paper,
   Table,
   TableBody,
@@ -7,7 +7,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  TextField,
+//   TextField,
   styled,
   tableCellClasses,
 } from "@mui/material";
@@ -91,46 +91,46 @@ export function CountryProjects() {
       project?.LOCATION,
       project?.YEAR_OF_BEGENING,
       project?.CURRENT_STATUS_SPA,
-      `US$ ${parseInt(project?.PROJECT_AMMOUNT).toLocaleString("en-US")}`
+      project?.PROJECT_AMMOUNT === "N/D" ? "N/D" : `US$ ${parseInt(project?.PROJECT_AMMOUNT).toLocaleString("en-US")}`
     )
   );
 
-  const companyFilter = [
-    {
-      value: "comp1",
-      label: "Empresa 1",
-    },
-    {
-      value: "comp2",
-      label: "Empresa 2",
-    },
-  ];
+//   const companyFilter = [
+//     {
+//       value: "comp1",
+//       label: "Empresa 1",
+//     },
+//     {
+//       value: "comp2",
+//       label: "Empresa 2",
+//     },
+//   ];
 
-  const projectFilter = [
-    {
-      value: "proj1",
-      label: "Proyecto 1",
-    },
-    {
-      value: "proj2",
-      label: "Proyecto 2",
-    },
-    {
-      value: "proj3",
-      label: "Proyecto 3",
-    },
-    {
-      value: "proj4",
-      label: "Proyecto 4",
-    },
-  ];
+//   const projectFilter = [
+//     {
+//       value: "proj1",
+//       label: "Proyecto 1",
+//     },
+//     {
+//       value: "proj2",
+//       label: "Proyecto 2",
+//     },
+//     {
+//       value: "proj3",
+//       label: "Proyecto 3",
+//     },
+//     {
+//       value: "proj4",
+//       label: "Proyecto 4",
+//     },
+//   ];
 
   return (
     <section className="era-margins">
       <h3 className="era-subheader">
         Proyectos en {projectInfo?.COUNTRY_NAME_SPA}
       </h3>
-      <div className="era-filtros-container">
+      {/* <div className="era-filtros-container">
         <span>Filtrar por: </span>
         <TextField className="era-filtros-box" select defaultValue="comp1">
           {companyFilter.map((option) => (
@@ -146,7 +146,7 @@ export function CountryProjects() {
             </option>
           ))}
         </TextField>
-      </div>
+      </div> */}
       <div>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">

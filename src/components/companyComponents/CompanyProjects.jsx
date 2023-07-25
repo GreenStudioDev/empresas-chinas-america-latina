@@ -1,5 +1,5 @@
 import {
-  MenuItem,
+//   MenuItem,
   Paper,
   Table,
   TableBody,
@@ -7,7 +7,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  TextField,
+//   TextField,
   styled,
   tableCellClasses,
 } from "@mui/material";
@@ -89,39 +89,39 @@ export function CompanyProjects() {
       project?.LOCATION,
       project?.YEAR_OF_BEGENING,
       project?.CURRENT_STATUS_SPA,
-      `US$ ${parseInt(project?.PROJECT_AMMOUNT).toLocaleString("en-US")}`
+      project?.PROJECT_AMMOUNT === "N/D" ? "N/D" : `US$ ${parseInt(project?.PROJECT_AMMOUNT).toLocaleString("en-US")}`
     )
   );
 
-  const companyFilter = [
-    {
-      value: "comp1",
-      label: "Empresa 1",
-    },
-    {
-      value: "comp2",
-      label: "Empresa 2",
-    },
-  ];
+//   const companyFilter = [
+//     {
+//       value: "comp1",
+//       label: "Empresa 1",
+//     },
+//     {
+//       value: "comp2",
+//       label: "Empresa 2",
+//     },
+//   ];
 
-  const projectFilter = [
-    {
-      value: "proj1",
-      label: "Proyecto 1",
-    },
-    {
-      value: "proj2",
-      label: "Proyecto 2",
-    },
-    {
-      value: "proj3",
-      label: "Proyecto 3",
-    },
-    {
-      value: "proj4",
-      label: "Proyecto 4",
-    },
-  ];
+//   const projectFilter = [
+//     {
+//       value: "proj1",
+//       label: "Proyecto 1",
+//     },
+//     {
+//       value: "proj2",
+//       label: "Proyecto 2",
+//     },
+//     {
+//       value: "proj3",
+//       label: "Proyecto 3",
+//     },
+//     {
+//       value: "proj4",
+//       label: "Proyecto 4",
+//     },
+//   ];
 
   return (
     <section className="era-margins">
@@ -157,7 +157,7 @@ export function CompanyProjects() {
             </MenuItem>
           ))}
         </TextField>
-      </div>
+      </div> */}
       <div>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: "720px" }} aria-label="customized table">
@@ -188,9 +188,7 @@ export function CompanyProjects() {
                   <StyledTableCell align="center">
                     {row.projectName}
                   </StyledTableCell>
-                  <StyledTableCell align="center">
-                    {row.sector}
-                  </StyledTableCell>
+                  <StyledTableCell align="center">{row.sector}</StyledTableCell>
                   <StyledTableCell align="center">
                     {row.subsidiary}
                   </StyledTableCell>

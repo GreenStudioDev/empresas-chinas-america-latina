@@ -87,11 +87,13 @@ export function CompanyTitle() {
                 key={`countries-sub-key-${country?.COUNTRY_NAME_SPA}`}
                 className="era-countries-container"
               >
+                <Link to={`/empresas-region-andina/country/${country?.COUNTRY_NAME_ENG}`}>
                 <img
                   className="era-countries-icon-container"
                   src={country?.COUNTRY_FLAG}
                   alt="country flag"
                 />
+                </Link>
                 <div>
                   <span className="era-p-bold">
                     {country?.COUNTRY_NAME_SPA}
