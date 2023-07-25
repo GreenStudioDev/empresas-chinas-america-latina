@@ -9,30 +9,6 @@
     margin-left: 5px;
 }
 
-/*Descripción País*/
-.era-sector-container {
-    display: flex;
-    align-items: center;
-}
-.era-sector-icon {
-    height: 35px;
-    margin-left: 5px;
-    color: #333333;
-}
-.era-sector-icon-dark {
-    margin-left: 5px;
-    color: #fff;
-}
-.era-sector-description {
-    font-weight: bold;
-}
-.era-sector-status {
-    font-style: italic;
-    font-weight: 600;
-    font-size: 14px;
-    margin-left: 25px;
-}
-
 /*Tarjeta Empresas*/
 .era-tarjeta-container {
     display: flex;
@@ -42,18 +18,13 @@
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-.era-tarjeta-logo-container {
-    width: 172px;
-    height: 172px;
-    background-color: #E4E4E4;
-    align-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .era-tarjeta-logo {
-    max-width: 172px;
-    max-height: 172px;
+    max-width: 150px;
+    max-height: 175px;
+    padding: 10px;
     background-color: #E4E4E4;
     align-content: center;
 }

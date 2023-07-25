@@ -21,8 +21,8 @@ export function ProjectCompanyInfo() {
         <div>
           <img className="era-company-logo" src={projectInfo?.COMPANY_LOGO} alt="company logo" />
         </div>
-        <div className="era-company-description">
-          <p className="era-company-title">Empresa RPCh: {projectInfo?.COMPANY_NAME}</p>
+        <div className="era-company-card-description">
+          <p className="era-h2">Empresa RPCh: {projectInfo?.COMPANY_NAME}</p>
           <p>
             公司: <span className="era-company-text">{projectInfo?.COMPANY_NAME_ZH}</span>
           </p>

@@ -40,14 +40,13 @@ export function CountryTitle() {
         </div>
         <div>
           <div>
-            <span>N° Empresas: </span>
-            <span className="era-sector-description"> #{countryFilterInfo.length}</span>
+            <p>N° Empresas:<span className="era-p-bold"> #{countryFilterInfo.length}</span> </p>
           </div>
           <div className="era-sector-container">
             {countryFilterInfo.map((info) => {
               return (
                 <p key={`sectors-${info?.COM_ID}`}>
-                  sectores: <span className="era-sector-description">{info?.SECTOR_NAME_SPA}</span>
+                  sectores: <span className="era-p-bold">{info?.SECTOR_NAME_SPA}</span>
                   <img className="era-sector-icon"
                     src={info?.ICON}
                     alt="sector-logo"
@@ -58,10 +57,10 @@ export function CountryTitle() {
           </div>
           <div>
             <span>Estatus de la relación bilateral: </span>
-            <span className="era-sector-description">
+            <span className="era-p-bold">
               {countryInfo?.BILATERAL_RELATIONS_STATUS_SPA}*
             </span>
-            <p className="era-sector-status">
+            <p className="era-status">
               *La República Popular China ha desarrollado un modelo de cuatro
               niveles para clasificar su relación con otros países de acuerdo
               con el nivel de importancia y profundidad de sus relacionales

@@ -45,7 +45,7 @@
     font-size: 36px;
     color: #C52633;
     text-align: left;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 36px;
     margin: 0;
 }
@@ -54,7 +54,18 @@
     color: #333333;
     text-align: left;
     font-weight: normal;
-    line-height: 16px;
+}
+.era-p-bold {
+    font-size: 16px;
+    color: #333333;
+    text-align: left;
+    font-weight: bold;
+}
+.era-status {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 25px;
 }
 
 /* Links Global - Light Mode*/
@@ -66,6 +77,13 @@
     align-items: center;
     text-decoration: none;
 }
+.era-links-table {
+    font-size: 14px;
+    color: #C52633;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
 .era-link-back {
     font-size: 16px;
     color: #808080;
@@ -74,11 +92,6 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-}
-.era-text-body {
-    font-size: 16px;
-    color: #333333;
-    font-weight: normal;
 }
 
 /* Textos General - Dark Mode*/
@@ -159,4 +172,19 @@
     box-sizing: content-box;
     outline: none;
     margin-left: 10px;
+}
+
+/*Sectores*/
+.era-sector-container {
+    display: flex;
+    align-items: center;
+}
+.era-sector-icon {
+    height: 35px;
+    margin-left: 5px;
+    color: #333333;
+}
+.era-sector-icon-dark {
+    margin-left: 5px;
+    color: #fff;
 }

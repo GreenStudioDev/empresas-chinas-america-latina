@@ -28,7 +28,7 @@ export function ProjectTitle() {
             </Link>
           </div>
         <div>
-          <h1>{projectInfo?.PROJECT_NAME_SPA}</h1>
+          <h1 className="era-h1">{projectInfo?.PROJECT_NAME_SPA}</h1>
           <p>
             {projectInfo?.PROJECT_DESCRIPTION_SPA}
           </p>
@@ -42,7 +42,7 @@ export function ProjectTitle() {
             <span>
               Sector:
             </span>
-            <span className="era-sector-description">
+            <span className="era-p-bold">
               {projectInfo?.SECTOR_NAME_SPA}
             </span>
             <span className="era-sector-icon">

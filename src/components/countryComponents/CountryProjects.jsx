@@ -83,11 +83,11 @@ export function CountryProjects() {
         <img style={{ height: "40px" }} src={project?.ICON} alt="sector icon" />
         {project?.SECTOR_NAME_SPA}
       </div>,
-      <Link to={`/empresas-region-andina/company/${project?.COMPANY_NAME}`}>
+      <Link className="era-links-table" to={`/empresas-region-andina/company/${project?.COMPANY_NAME}`}>
         {project?.COMPANY_NAME}
       </Link>,
       project?.SUBSIDIARY_NAME,
-      <Link to={`/empresas-region-andina/project/${project?.PROJECT_NAME_SPA}`}>{project?.PROJECT_NAME_SPA}</Link>,
+      <Link className="era-links-table" to={`/empresas-region-andina/project/${project?.PROJECT_NAME_SPA}`}>{project?.PROJECT_NAME_SPA}</Link>,
       project?.LOCATION,
       project?.YEAR_OF_BEGENING,
       project?.CURRENT_STATUS_SPA,

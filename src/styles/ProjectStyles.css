@@ -2,18 +2,6 @@
 .era-project-description {
     font-weight: bold;
 }
-.era-sector-container {
-    display: flex;
-    align-items: center;
-}
-.era-sector-icon {
-    margin-left: 5px;
-    color: #333333;
-}
-.era-sector-icon-dark {
-    margin-left: 5px;
-    color: #fff;
-}
 .era-flag-icon {
     margin-left: 5px;
     max-height: 25px;
@@ -34,6 +22,7 @@
     max-width: 172px;
     max-height: 172px;
     align-content: center;
+    color: #333333;
 }
 .era-company-card-description {
     margin-left: 25px;

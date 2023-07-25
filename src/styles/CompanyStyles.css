@@ -6,28 +6,13 @@
     font-weight: bold;
 }
 
-/*Descripción Empresa*/
-.era-company-description {
-    font-weight: bold;
-}
-.era-sector-container {
-    display: flex;
-    align-items: center;
-}
-.era-sector-icon {
-    margin-left: 5px;
-    color: #333333;
-}
-.era-sector-icon-dark {
-    margin-left: 5px;
-    color: #fff;
-}
-
 /*Sección Países*/
 .era-countries-container {
     display: flex;
     align-items: center;
     margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .era-countries-icon-container {
     max-height: 42px;
