@@ -23,7 +23,7 @@ export function ProjectProfileSection() {
           <img className="era-pdf-img" src="https://fundacionandresbello.org/era-pdf-placeholder/
 " alt="profile cover" />
           <div className="era-pdf-description">
-            <h3 className="era-pdf-subheader">Descarga el perfil en PDF</h3>
+            <h3 className="era-h3">Descarga el perfil en PDF</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elii.Lorem ipsum
               dolor sit amet, Lorem ipsum dolor sit amet, consectetuer adipiscing

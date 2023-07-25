@@ -151,7 +151,7 @@ export function MapView({ setTooltipContent }) {
               {countryFilterInfo.map((info) => {
                 return (
                   <div className="era-home-sector-container">
-                  <p key={`sectors-${info?.COM_ID}`}>
+                  <p className="era-p" key={`sectors-${info?.COM_ID}`}>
                     sectores: <span className="era-home-sector-description">{info?.SECTOR_NAME_SPA}</span>
                     <img className="era-home-sector-icon" src={info?.ICON} alt="sector-logo" />
                   </p>

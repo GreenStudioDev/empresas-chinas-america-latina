@@ -78,7 +78,7 @@ export function CompanyProjects() {
   const rows = projectFilterInfo.map((project) =>
     createData(
       project?.COUNTRY_NAME_SPA,
-      <Link to={`/empresas-region-andina/project/${project?.PROJECT_NAME_SPA}`}>
+      <Link className="era-links-table" to={`/empresas-region-andina/project/${project?.PROJECT_NAME_SPA}`}>
       {project?.PROJECT_NAME_SPA}
       </Link>,
       <div>
@@ -125,7 +125,7 @@ export function CompanyProjects() {
 
   return (
     <section className="era-margins">
-      <h3 className="era-subheader">Proyectos de {projectInfo?.COMPANY_NAME} </h3>
+      <h3 className="era-h2">Proyectos de {projectInfo?.COMPANY_NAME} </h3>
       <div className="era-filtros-container">
         <span>Filtrar por: </span>
         <TextField

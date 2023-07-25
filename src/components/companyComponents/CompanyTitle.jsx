@@ -52,34 +52,34 @@ export function CompanyTitle() {
           </Link>
         </div>
         <div>
-          <h1>{companyInfo?.COMPANY_NAME}</h1>
+          <h1 className="era-h1">{companyInfo?.COMPANY_NAME}</h1>
           <span>公司:</span>
           <span className="era-title-chinese">
             {companyInfo?.COMPANY_NAME_ZH}
           </span>
-          <a className="era-as" href={companyInfo?.WEBPAGE} target="blank">
+          <a className="era-links" href={companyInfo?.WEBPAGE} target="blank">
             {companyInfo?.WEBPAGE}
           </a>
         </div>
         <div>
           <div>
             <p>
-              <span className="era-company-description">Tipo:</span>{" "}
+              <span className="era-p-bold">Tipo:</span>{" "}
               {companyInfo?.TYPE_SPA}
-              <span className="era-company-description">
+              <span className="era-p-bold">
                 Social Credit Code:
               </span>
               {companyInfo?.SOCIAL_CREDIT_CODE}
-              <span className="era-company-description">Ubicación:</span>{" "}
+              <span className="era-p-bold">Ubicación:</span>{" "}
               {companyInfo?.ADDRESS_RPCh + " " + companyInfo?.HEADQUARTERS_RPCh}
             </p>
             <p>{companyInfo?.COMPANY_DESCRIPTION_SPA}</p>
           </div>
           <div>
-            <span className="era-company-description">
+            <span className="era-p-bold">
               Países en los que tiene Presencia:{" "}
             </span>
-            <span>{companyFilterInfo.length}</span>
+            <span>#{companyFilterInfo.length}</span>
           </div>
           {companyFilterInfo.map((country) => {
             return (
@@ -93,7 +93,7 @@ export function CompanyTitle() {
                   alt="country flag"
                 />
                 <div>
-                  <span className="era-country-description">
+                  <span className="era-p-bold">
                     {country?.COUNTRY_NAME_SPA}
                   </span>{" "}
                   {subsidiaryInfo
@@ -105,26 +105,26 @@ export function CompanyTitle() {
                       return (
                         <div key={`sub-key${sub?.SUB_ID}`}>
                           <span
-                            className="era-country-description"
+                            className="era-p-bold"
                           >
                             {" "}
                             Subsidiaria:
                           </span>{" "}
                           {sub?.SUBSIDIARY_NAME + " "}
-                          <span className="era-country-description">
+                          <span className="era-p-bold">
                             Número de Intificación Fiscal:{" "}
                           </span>
                           {sub?.SUBSIDIARY_TAX_ID !== ""
                             ? sub?.SUBSIDIARY_TAX_ID
                             : "N/D"}
-                          <span className="era-country-description">
+                          <span className="era-p-bold">
                             {" "}
                             Año de Registro:
                           </span>{" "}
                           {sub?.SUBSIDIARY_REGISTRATION_YEAR !== ""
                             ? sub?.SUBSIDIARY_REGISTRATION_YEAR
                             : "N/D"}
-                          <span className="era-country-description">
+                          <span className="era-p-bold">
                             {" "}
                             Inicio de Operaciones:
                           </span>{" "}
@@ -140,7 +140,7 @@ export function CompanyTitle() {
             );
           })}
           <div className="era-sector-container">
-            <span className="era-country-description">Sectores: </span>
+            <span className="era-p-bold">Sectores: </span>
             {" " + SectorNames}
             <span className="era-sector-icon">
               <img

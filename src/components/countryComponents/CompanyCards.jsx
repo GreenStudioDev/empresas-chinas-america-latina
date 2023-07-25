@@ -21,7 +21,8 @@ export function CompanyCards() {
     <div className="era-margins">
       {countryFilterInfo.map((company) => {
         return (
-          <Card className="era-tarjeta-container" key={`com-card-key-${company?.COM_ID}`}>
+          <Card sx={{backgroundColor:"#CACACA",border:"0",boxShadow:"0",borderRadius:"0"}}
+            className="era-tarjeta-container" key={`com-card-key-${company?.COM_ID}`}>
             <CardMedia
               className="era-tarjeta-logo"
               component="img"
@@ -40,7 +41,7 @@ export function CompanyCards() {
                 >
                   {company?.COMPANY_NAME_ZH}
                 </Typography>
-                <Typography variant="subtitle2" color="red" component="div">
+                <Typography  variant="subtitle2" color="red" component="div">
                   {company?.WEBPAGE}
                 </Typography>
                 <Typography
