@@ -170,8 +170,8 @@ export function MapView({ setTooltipContent }) {
         </div>
       ) : (
         <div style={infoStyle}>
-          <h3>{countryNameSpa}</h3>
-          <p>No hay información disponible por el momento</p>
+          <h1 className="era-h1">{countryNameSpa}</h1>
+          <p className="era-p-bold">No hay información disponible por el momento</p>
         </div>
       )}
     </section>

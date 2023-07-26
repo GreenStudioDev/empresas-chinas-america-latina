@@ -126,7 +126,7 @@ export function CompanyProjects() {
   return (
     <section className="era-margins">
       <h3 className="era-h2">Proyectos de {projectInfo?.COMPANY_NAME} </h3>
-      <div className="era-filtros-container">
+      {/* <div className="era-filtros-container">
         <span>Filtrar por: </span>
         <TextField
           id="outlined-select-currency"
