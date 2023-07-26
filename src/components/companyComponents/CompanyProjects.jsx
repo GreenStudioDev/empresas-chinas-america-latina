@@ -78,7 +78,7 @@ export function CompanyProjects() {
   const rows = projectFilterInfo.map((project) =>
     createData(
       project?.COUNTRY_NAME_SPA,
-      <Link to={`/empresas-region-andina/project/${project?.PROJECT_NAME_SPA}`}>
+      <Link className="era-links-table" to={`/empresas-region-andina/project/${project?.PROJECT_NAME_SPA}`}>
         {project?.PROJECT_NAME_SPA}
       </Link>,
       <div>

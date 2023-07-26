@@ -5,8 +5,8 @@ export function Home() {
   return (
     <section>
       <Header />
+      <Footer style={{zIndex: "1", position: "relative"}} />
       <MapView />
-      <Footer />
     </section>
   );
 }

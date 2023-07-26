@@ -9,7 +9,7 @@ export function Footer() {
   const { countries_Companies } = useContext(countriesContext);
   const { projects } = useContext(projectsContext);
   const [comapniesInfo, setComapniesInfo] = useState([]);
-  const [projectsInfo, setProjectsInfo] = useState([]);
+  // const [projectsInfo, setProjectsInfo] = useState([]);
 
   useEffect(() => {
     const filetrInfo = [
@@ -17,15 +17,15 @@ export function Footer() {
         countries_Companies?.map((companies) => companies?.COMPANY_NAME)
       ),
     ];
-    const projectsName = [
-      ...new Set(projects?.map((project) => project?.PROJECT_NAME_SPA)),
-    ];
     setComapniesInfo(filetrInfo);
-    setProjectsInfo(projectsName);
+    // const projectsName = [
+    //   ...new Set(projects?.map((project) => project?.PROJECT_NAME_SPA)),
+    // ];
+    // setProjectsInfo(projectsName);
   }, [countries_Companies, projects]);
 
   return (
-    <section>
+    <section style={{ position: "relative", zIndex: "1"}}>
       <div className="era-home-filters-container"
         style={{
           display: "flex",
@@ -52,7 +52,7 @@ export function Footer() {
             </Link>
           ))}
         </TextField>
-        <TextField
+        {/* <TextField
           id="projects"
           select
           label="Proyecto"
@@ -71,7 +71,7 @@ export function Footer() {
               </MenuItem>
             </Link>
           ))}
-        </TextField>
+        </TextField> */}
       </div>
     </section>
   );

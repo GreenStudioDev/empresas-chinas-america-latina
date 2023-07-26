@@ -60,7 +60,12 @@ export function MapView({ setTooltipContent }) {
       rotate: [70, 0, 0],
       scale: 65,
     });
-    setMapStyle({ width: "50%", marginTop: "-55px", position: "relative", height: "670px" });
+    setMapStyle({
+      width: "50%",
+      marginTop: "-55px",
+      position: "relative",
+      height: "670px",
+    });
     setInfoStyle({ width: "50%", position: "relative" });
   };
 
@@ -137,31 +142,69 @@ export function MapView({ setTooltipContent }) {
       </div>
       {countryNames.includes(countryInfo?.COUNTRY_NAME_ENG) ? (
         <div style={infoStyle}>
-          <div className="era-home-country-close" style={{ cursor: "pointer" }} onClick={handleClose}>
+          <div
+            className="era-home-country-close"
+            style={{ cursor: "pointer" }}
+            onClick={handleClose}
+          >
             <span className="era-link-back-home">X</span>
           </div>
-          <img style={{width:"100%"}} src={countryInfo?.COUNTRY_BANNER_MAP} alt="banner pais click" />
-          <div style={{padding:"25px"}}>
+          <img
+            style={{ width: "100%" }}
+            src={countryInfo?.COUNTRY_BANNER_MAP}
+            alt="banner pais click"
+          />
+          <div style={{ padding: "25px" }}>
             <div className="era-home-title-container">
               <h1 className="era-h1">{countryNameSpa}</h1>
-              <img className="era-home-title-flag" src={countryInfo?.COUNTRY_FLAG} alt="country-flag" />
+              <img
+                className="era-home-title-flag"
+                src={countryInfo?.COUNTRY_FLAG}
+                alt="country-flag"
+              />
             </div>
             <div>
-              <p>Número de empresas:<span className="era-home-sector-description"> #{countryFilterInfo.length} </span></p>
+              <p>
+                Número de empresas:
+                <span className="era-home-sector-description">
+                  {" "}
+                  #{countryFilterInfo.length}{" "}
+                </span>
+              </p>
               {countryFilterInfo.map((info) => {
                 return (
-                  <div className="era-home-sector-container">
-                  <p className="era-p" key={`sectors-${info?.COM_ID}`}>
-                    sectores: <span className="era-home-sector-description">{info?.SECTOR_NAME_SPA}</span>
-                    <img className="era-home-sector-icon" src={info?.ICON} alt="sector-logo" />
-                  </p>
+                  <div key={`sectors-${info?.COM_ID}`} className="era-home-sector-container">
+                    <p className="era-p">
+                      sectores:{" "}
+                      <span className="era-home-sector-description">
+                        {info?.SECTOR_NAME_SPA}
+                      </span>
+                      <img
+                        className="era-home-sector-icon"
+                        src={info?.ICON}
+                        alt="sector-logo"
+                      />
+                    </p>
                   </div>
                 );
               })}
-              <p className="era-p">Principales Importaciones:<span className="era-home-sector-description"> {countryInfo?.MAIN_IMPORTS_SPA} </span></p>
-              <p className="era-p">Principales Exportaciones:<span className="era-home-sector-description"> {countryInfo?.MAIN_EXPORTS_SPA} </span></p>
+              <p className="era-p">
+                Principales Importaciones:
+                <span className="era-home-sector-description">
+                  {" "}
+                  {countryInfo?.MAIN_IMPORTS_SPA}{" "}
+                </span>
+              </p>
+              <p className="era-p">
+                Principales Exportaciones:
+                <span className="era-home-sector-description">
+                  {" "}
+                  {countryInfo?.MAIN_EXPORTS_SPA}{" "}
+                </span>
+              </p>
             </div>
-            <Link className="era-links"
+            <Link
+              className="era-links"
               to={`/empresas-region-andina/country/${countryInfo?.COUNTRY_NAME_ENG}`}
             >
               Visitar el perfil del país{" "}
