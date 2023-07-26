@@ -29,12 +29,12 @@ export function Footer() {
       <div className="era-home-filters-container"
         style={{
           display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center",
+          justifyContent: "flex-end",
+          alignItems: "flex-end",
           width: "100%",
         }}
       >
-        <span>Buscar por: </span>
+        <span style={{marginRight: "15px"}}>Buscar por empresa: </span>
         <TextField
           id="companies"
           select
@@ -42,7 +42,7 @@ export function Footer() {
           label="Empresa"
           defaultValue=""
           // helperText="Seleccione una empresa"
-          sx={{width: "20%"}}
+          sx={{width: "20%", marginRight: "15px"}}
         >
           {comapniesInfo.map((name) => ( 
             <Link className="era-links" to={`/empresas-region-andina/company/${name}`} key={name}>
