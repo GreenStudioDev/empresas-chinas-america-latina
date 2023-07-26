@@ -6,18 +6,24 @@
     padding-right: 96px;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: #e4e4e4c8;
+    background-color: #f0f0f0c0;
     height: auto;
 }
-/*Filters Container*/
+/*Filters*/
 .era-home-filters-container {
     /* position: fixed; */
     bottom: 0;
     padding-right: 96px;
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: #e4e4e4c8;
+    background-color: #f0f0f0;
     height: auto;
+}
+.era-home-filters-menu {
+    background-color: #e4e4e4;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
 }
 /*Country Info Container*/
 .era-home-country-container {
