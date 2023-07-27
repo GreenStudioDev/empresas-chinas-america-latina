@@ -1,30 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/App.css";
-// import { Home, CompanyPage, ProjectPage } from "../pages";
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AppRoutes } from "./AppRoutes";
-
-// const router = createBrowserRouter([
-//   {
-//     path: "empresas-region-andina",
-//     element: <Home />,
-//     children: [
-//       {
-//         path: "company",
-//         element: <CompanyPage />,
-//       },
-//       {
-//         path: "project",
-//         element: <ProjectPage />,
-//       },
-//     ],
-//   },
-// ]);
+import { BrowserRouter } from "react-router-dom";
+import { countriesContext } from "../context";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export function App() {
+  const { countries } = useContext(countriesContext);
+  console.log(
+    "🚀 ~ file: App.js:9 ~ App ~ countries:",
+    countries.length
+  );
+
   return (
-    // <RouterProvider router={router}>
-    <AppRoutes />
-    // </RouterProvider>;
+    <BrowserRouter>
+    <div style={{display: "flex", fleDirection: "column", justifyContent: "center"}}>
+    {countries.length < 4 ? <CircularProgress style={{width: "300px", height: "300px", margin: "150px"}} /> : <AppRoutes />}
+    </div>
+    </BrowserRouter>
   );
 }
