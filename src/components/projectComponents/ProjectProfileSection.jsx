@@ -20,8 +20,7 @@ export function ProjectProfileSection() {
     <div className="era-margins">
       <a className="era-pdf-link" href={projectInfo?.PROJECT_PROFILE_LINK} target="_blank" rel="noopener noreferrer">
         <div className="era-pdfcontainer">
-          <img className="era-pdf-img" src="https://fundacionandresbello.org/era-pdf-placeholder/
-" alt="profile cover" />
+          <img className="era-pdf-img" src="https://fundacionandresbello.org/era-pdf-project-v2/" alt="profile cover" />
           <div className="era-pdf-description">
             <h3 className="era-h3">Descarga el perfil en PDF</h3>
             <p>

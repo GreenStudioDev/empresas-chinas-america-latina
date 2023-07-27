@@ -20,7 +20,7 @@ export function ProjectTitle() {
 
   return (
     <section>
-     <img className="era-banner-img" src="https://fundacionandresbello.org/era-banner-placeholder/" alt="Project banner" />
+     <img className="era-banner-img" src="https://fundacionandresbello.org/era-banner-project-v2/" alt="Project banner" />
       <div className="era-margins">
         <div>
             <Link className="era-link-back" to={"/empresas-region-andina"}>
