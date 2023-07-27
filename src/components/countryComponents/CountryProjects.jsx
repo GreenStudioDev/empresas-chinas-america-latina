@@ -127,7 +127,7 @@ export function CountryProjects() {
 
   return (
     <section className="era-margins">
-      <h3 className="era-subheader">
+      <h3 className="era-h2">
         Proyectos en {projectInfo?.COUNTRY_NAME_SPA}
       </h3>
       {/* <div className="era-filtros-container">
@@ -147,7 +147,7 @@ export function CountryProjects() {
           ))}
         </TextField>
       </div> */}
-      <div>
+      <div style={{marginTop:"25px"}}>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>

@@ -158,7 +158,7 @@ export function CompanyProjects() {
           ))}
         </TextField>
       </div> */}
-      <div>
+      <div style={{marginTop:"25px"}}>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: "720px" }} aria-label="customized table">
             <TableHead>
