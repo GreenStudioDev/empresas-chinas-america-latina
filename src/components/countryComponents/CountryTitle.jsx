@@ -67,8 +67,6 @@ export function CountryTitle() {
               bilaterales. Estos son, de menor a mayor profundidad: 1.
               Asociación Cooperativa; 2. Asociación Cooperativa Integral; 3.
               Asociación Estratégica; y, 4. Asociación Estratégica Integral.
-              Para mayor información visita
-              https://www.thedialogue.org/blogs/2014/08/charting-chinas-diplomatic-ties-an-infographic-from-global-times/
             </p>
           </div>
         </div>

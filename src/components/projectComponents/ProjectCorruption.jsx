@@ -16,7 +16,7 @@ export function ProjectCorruption() {
 
   return (
     <section className="era-margins">
-      <h2>Corrupción e Irregularidades</h2>
+      <h2 className="era-h2">Corrupción e Irregularidades</h2>
       <div className="era-project-description">
         <p>
         {projectInfo?.SUMMARY_OF_IRREGULARITIES_SPA !== ""
