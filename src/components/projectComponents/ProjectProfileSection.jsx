@@ -25,11 +25,7 @@ export function ProjectProfileSection() {
           <div className="era-pdf-description">
             <h3 className="era-h3">Descarga el perfil en PDF</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elii.Lorem ipsum
-              dolor sit amet, Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-              aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-              exerci tation ullamcorper suscipit lobortis nisl ut aliquip.
+            Para mayor información sobre los proyectos realizados por las empresas chinas en la región puede descargar el siguiente documento
             </p>
           </div>
         </div>
